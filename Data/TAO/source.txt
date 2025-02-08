@@ -1,0 +1,18 @@
+
+_2023_06_05
+
+NDBC TAO Station data downloaded from
+
+https://tao.ndbc.noaa.gov/tao/data_download/search_map.shtml
+
+TAO_AIRT - Air temperature (SSA)
+TAO_SST - Sea surface temperature (SST)
+
+
+
+Note: there are three types of stations:
+
+NDBC TAO Station
+JAMSTEC TRITON Station
+Historical Station
+
