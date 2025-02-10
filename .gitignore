@@ -8,3 +8,6 @@
 ehthumbs.db
 Thumbs.db
 .Rhistory
+figures/*
+Derived_Data/*
+Data/ERA_SST_SAT.nc
