@@ -1,4 +1,0 @@
-
-You can download the file ERA_SST_SAT.nc from
-
-http://craigmile.com/peter/data/ERA_SST_SAT.nc
