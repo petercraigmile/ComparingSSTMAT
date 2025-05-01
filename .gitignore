@@ -12,3 +12,4 @@ figures/*
 tables/*
 Derived_Data/*
 Data/ERA_SST_SAT.nc
+trace_plots/*

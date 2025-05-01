@@ -143,7 +143,9 @@ add.time.series.to.map <- function (x, y, w, h, times, series,
 
 
 
-handle.empty.plot <- function (gj, SST.MAT.label=FALSE, buoy.ERA.label=FALSE) {
+handle.empty.plot <- function (gj, SST.MAT.label=FALSE,
+                               buoy.ERA.label=TRUE,
+                               orig.label=GALS) {
 
     if (is.na(gj)) {
         
@@ -160,6 +162,15 @@ handle.empty.plot <- function (gj, SST.MAT.label=FALSE, buoy.ERA.label=FALSE) {
             text(-0.1,  0.5+0.1, "ERA5", cex=2, col="gray40")
             text(-0.1, -0.5+0.2, "Buoy", cex=2, col="blue")
         }
+                
+        if ((j==6) & (orig.label)) {
+            
+            text(0,  0.75+0.1, "ERA5 SST", cex=1.6, col="green")
+            text(0,  0.25+0.1, "Buoy SST", cex=1.6, col="red")
+            text(0, -0.25+0.1, "ERA5 MAT", cex=1.6, col="blue")
+            text(0, -0.75+0.1, "Buoy MAT", cex=1.6, col="gray40")
+        }
+
 
     }
 

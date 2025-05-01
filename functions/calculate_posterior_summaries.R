@@ -118,3 +118,37 @@ hline <- function (fname) {
     cat("\\hline\n", file=fname, append=TRUE)
 }
 
+
+
+## ======================================================================
+
+posterior.std.line <- function (latex, name, fname,
+                            transform=function (x) x, index) {
+
+    cat(latex, " & ", file=fname, append=TRUE)
+
+    if (missing(index)) {
+    
+        x <- transform(c(buoy.std.model1[name], buoy.std.model2[name]))
+    } else {
+
+        x <- transform(c(buoy.std.model1[name][index,],
+                         buoy.std.model2[name][index,]))
+    }
+
+    summ(x)
+    cat( " & ", file=fname, append=TRUE)
+
+    if (missing(index)) {
+    
+        x <- transform(c(ERA.std.model1[name], ERA.std.model2[name]))
+    } else {
+
+        x <- transform(c(ERA.std.model1[name][index,],
+                         ERA.std.model2[name][index,]))
+    }
+
+    summ(x)
+    cat( "\\\\\n", file=fname, append=TRUE)
+}
+
